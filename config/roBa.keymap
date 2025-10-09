@@ -29,11 +29,6 @@
     combos {
         compatible = "zmk,combos";
 
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
-        };
-
         shift_tab {
             bindings = <&kp LS(TAB)>;
             key-positions = <12 13>;
@@ -59,9 +54,14 @@
             key-positions = <37 36>;
         };
 
-        tab {
+        alt_tab {
             bindings = <&kp TAB>;
             key-positions = <0 37>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <12 11>;
         };
     };
 
