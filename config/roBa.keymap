@@ -63,6 +63,11 @@
             bindings = <&kp TAB>;
             key-positions = <12 11>;
         };
+
+        under_ {
+            bindings = <&kp UNDER>;
+            key-positions = <32 33>;
+        };
     };
 
     macros {
