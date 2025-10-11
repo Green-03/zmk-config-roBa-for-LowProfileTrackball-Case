@@ -115,7 +115,7 @@
             tapping-term-ms = <3000>;
             quick-tap-ms = <(-1)>;
             require-prior-idle-ms = <(-1)>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
         };
 
         hold_2000: hold_2000 {
