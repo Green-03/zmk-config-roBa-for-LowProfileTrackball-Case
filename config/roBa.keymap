@@ -80,8 +80,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
+                <&macro_press>,
+                <&kp LWIN>,
                 <&macro_tap>,
-                <&kp LWIN &kp SPACE>,
+                <&kp SPACE>,
                 <&macro_release>,
                 <&macro_tap>,
                 <&kp LEFT_BRACKET>,
