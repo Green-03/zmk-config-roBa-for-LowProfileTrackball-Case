@@ -34,11 +34,6 @@
             key-positions = <11 10>;
         };
 
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
         eq {
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
@@ -92,13 +87,13 @@
             tapping-term-ms = <200>;
         };
 
-        hold_5000: hold_5000 {
+        hold_6000: hold_6000 {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_5000";
+            label = "HOLD_6000";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <5000>;
+            tapping-term-ms = <6000>;
             quick-tap-ms = <(-1)>;
             require-prior-idle-ms = <(-1)>;
             flavor = "hold-preferred";
@@ -130,8 +125,8 @@
         default_layer {
             bindings = <
 &lt 6 TAB                &kp W         &kp E             &kp R                             &kp T                                                                          &kp Y      &kp U  &kp I      &kp O    &kp P
-&kp A                    &kp S         &kp D             &kp F                             &kp G        &kp ESCAPE                       &kp RIGHT_BRACKET                &kp H      &kp J  &lt 5 K    &kp L    &lt_to_layer_0 4 MINUS
-&hold_5000 LEFT_SHIFT Z  &kp X         &kp C             &kp V                             &kp B        &kp LS(NUMBER_1)                 &kp LA(SINGLE_QUOTE)             &kp N      &kp M  &kp COMMA  &kp DOT  &lt 2 SLASH
+&hold_6000 LEFT_SHIFT A  &kp S         &kp D             &kp F                             &kp G        &kp ESCAPE                       &kp RIGHT_BRACKET                &kp H      &kp J  &lt 5 K    &kp L    &lt_to_layer_0 4 MINUS
+&hold_6000 LEFT_SHIFT Z  &kp X         &kp C             &kp V                             &kp B        &kp LS(NUMBER_1)                 &kp AT_SIGN                      &kp N      &kp M  &kp COMMA  &kp DOT  &lt 2 SLASH
 &kp LCTRL                &kp LEFT_WIN  &kp INT_MUHENKAN  &hold_2000 LEFT_ALT INT_MUHENKAN  &lt 1 SPACE  &lt_to_layer_0 3 INT_HENKAN      &hold_2000 INT_HENKAN BACKSPACE  &kp ENTER                             &kp DEL
             >;
 
