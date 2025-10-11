@@ -85,6 +85,7 @@
                 <&macro_tap>,
                 <&kp SPACE>,
                 <&macro_release>,
+                <&kp LEFT_WIN>,
                 <&macro_tap>,
                 <&kp LEFT_BRACKET>,
                 <&macro_tap>,
