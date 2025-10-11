@@ -92,16 +92,35 @@
             tapping-term-ms = <200>;
         };
 
-        new_behaviork: new_behaviork {
+        hold_4000: hold_4000 {
             compatible = "zmk,behavior-hold-tap";
-            label = "NEW_BEHAVIORK";
+            label = "HOLD_4000";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <4000>;
             quick-tap-ms = <(-1)>;
             require-prior-idle-ms = <(-1)>;
             flavor = "tap-preferred";
+        };
+
+        hold_1500: hold_1500 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_1500";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <1500>;
+            quick-tap-ms = <(-1)>;
+            require-prior-idle-ms = <(-1)>;
+            flavor = "tap-preferred";
+        };
+
+        enter_henkan: enter_henkan {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ENTER_HENKAN";
+            #binding-cells = <0>;
+            bindings = <&kp ENTER>, <&kp INT_HENKAN>;
         };
     };
 
@@ -110,10 +129,10 @@
 
         default_layer {
             bindings = <
-&lt 6 TAB                    &kp W         &kp E             &kp R         &kp T                                                           &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A                        &kp S         &kp D             &kp F         &kp G        &kp ESCAPE                       &kp LEFT_BRACKET  &kp H        &kp J  &lt 5 K    &kp L    &lt_to_layer_0 4 MINUS
-&new_behaviork LEFT_SHIFT Z  &kp X         &kp C             &kp V         &kp B        &kp LS(NUMBER_1)                 &kp AT_SIGN       &kp N        &kp M  &kp COMMA  &kp DOT  &lt 2 SLASH
-&kp LCTRL                    &kp LEFT_WIN  &kp INT_MUHENKAN  &kp LEFT_ALT  &lt 1 SPACE  &lt_to_layer_0 3 INT_HENKAN      &kp BACKSPACE     &lt 2 ENTER                             &kp DEL
+&lt 6 TAB                &kp W         &kp E             &kp R         &kp T                                                            &kp Y                        &kp U  &kp I      &kp O    &kp P
+&kp A                    &kp S         &kp D             &kp F         &kp G        &kp ESCAPE                       &kp RIGHT_BRACKET  &kp H                        &kp J  &lt 5 K    &kp L    &lt_to_layer_0 4 MINUS
+&hold_4000 LEFT_SHIFT Z  &kp X         &kp C             &kp V         &kp B        &kp LS(NUMBER_1)                 &kp INT_RO         &kp N                        &kp M  &kp COMMA  &kp DOT  &lt 2 SLASH
+&kp LCTRL                &kp LEFT_WIN  &kp INT_MUHENKAN  &kp LEFT_ALT  &lt 1 SPACE  &lt_to_layer_0 3 INT_HENKAN      &kp BACKSPACE      &hold_1500 INT_HENKAN ENTER                             &kp DEL
             >;
 
             sensor-bindings =
@@ -123,10 +142,10 @@
 
         SYMBOL {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                      &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8   &kp NUMBER_9      &kp NUMBER_0
-&trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans        &trans        &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans        &trans        &kp SEMICOLON  &kp COLON         &mt RIGHT_SHIFT INT_RO
-&trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans                                                       &trans
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                      &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8   &kp NUMBER_9  &kp NUMBER_0
+&trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans        &trans        &trans         &kp AT_SIGN   &kp RIGHT_BRACKET
+&trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans        &trans        &kp SEMICOLON  &kp COLON     &mt RIGHT_SHIFT INT_RO
+&trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans                                                   &trans
             >;
         };
 
