@@ -127,17 +127,16 @@
             flavor = "balanced";
         };
 
-        hold_1000: hold_1000 {
+        hold_500: hold_500 {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_1000";
+            label = "HOLD_500";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <1000>;
+            tapping-term-ms = <500>;
             quick-tap-ms = <(-1)>;
             require-prior-idle-ms = <(-1)>;
             flavor = "hold-preferred";
-            hold-while-undecided;
         };
 
         enter_henkan: enter_henkan {
@@ -153,10 +152,10 @@
 
         default_layer {
             bindings = <
-&lt 6 TAB                &kp W         &kp E               &kp R                             &kp T                                                               &kp Y      &kp U  &kp I      &kp O    &lt 1 P
-&hold_3000 LEFT_SHIFT A  &kp S         &kp D               &kp F                             &kp G        &kp ESCAPE                       &right_bracket_macro  &kp H      &kp J  &lt 5 K    &kp L    &lt_to_layer_0 4 MINUS
-&hold_3000 LEFT_SHIFT Z  &kp X         &kp C               &kp V                             &kp B        &kp LS(NUMBER_1)                 &kp RIGHT_BRACKET     &kp N      &kp M  &kp COMMA  &kp DOT  &lt 2 SLASH
-&kp LCTRL                &kp LEFT_WIN  &lt 2 INT_MUHENKAN  &hold_1000 LEFT_ALT INT_MUHENKAN  &lt 1 SPACE  &lt_to_layer_0 3 INT_HENKAN      &kp BACKSPACE         &kp ENTER                             &kp DEL
+&lt 6 TAB                &kp W         &kp E               &kp R                            &kp T                                                               &kp Y      &kp U  &kp I      &kp O    &lt 1 P
+&hold_3000 LEFT_SHIFT A  &kp S         &kp D               &kp F                            &kp G        &kp ESCAPE                       &right_bracket_macro  &kp H      &kp J  &lt 5 K    &kp L    &lt_to_layer_0 4 MINUS
+&hold_3000 LEFT_SHIFT Z  &kp X         &kp C               &kp V                            &kp B        &kp LS(NUMBER_1)                 &kp RIGHT_BRACKET     &kp N      &kp M  &kp COMMA  &kp DOT  &lt 2 SLASH
+&kp LCTRL                &kp LEFT_WIN  &lt 2 INT_MUHENKAN  &hold_500 LEFT_ALT INT_MUHENKAN  &lt 1 SPACE  &lt_to_layer_0 3 INT_HENKAN      &kp BACKSPACE         &kp ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
@@ -193,10 +192,10 @@
 
         MOUSE {
             bindings = <
-&kp RS(NUMBER_1)  &trans  &trans  &trans  &trans                              &trans  &trans    &mkp MB3  &trans    &trans
-&trans            &trans  &trans  &trans  &trans  &trans      &trans          &trans  &mkp MB1  &trans    &mkp MB2  &trans
-&trans            &trans  &trans  &trans  &trans  &trans      &trans          &trans  &trans    &trans    &trans    &trans
-&trans            &trans  &trans  &trans  &trans  &trans      &kp INT_HENKAN  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans                              &trans  &trans    &mkp MB3  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans          &trans  &mkp MB1  &trans    &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans          &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &kp INT_HENKAN  &trans                                &trans
             >;
         };
 
