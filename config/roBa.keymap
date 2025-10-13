@@ -231,10 +231,10 @@
 
         SHIFT_NUM {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &kp RS(NUMBER_9)  &kp RS(NUMBER_0)  &kp RS(LCTRL)     &kp TILDE  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans            &trans            &kp RS(NUMBER_2)  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans            &trans            &trans            &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                           &trans
+&trans  &trans  &trans  &trans  &trans                      &kp RS(NUMBER_8)  &kp RS(NUMBER_9)  &kp EQUAL     &kp LCTRL   &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans            &trans            &kp NUMBER_2  &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans            &trans            &trans        &kp INT_RO  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                        &trans
             >;
         };
     };
