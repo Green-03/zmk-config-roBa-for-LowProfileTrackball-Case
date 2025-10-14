@@ -1,6 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
-#include <input/processors.dtsi>
 
 / {
     chosen {
@@ -113,34 +112,17 @@
         triggers-per-rotation = <48>;
     };
 
-    /* ===== トラックボール定義 ===== */
-    &spi0 {
-        status = "okay";
-
-        trackball: trackball@0 {
-            status = "okay";
-            reg = <0>;
-        };
-    };
-
-    /* ===== トラックボール速度制御 ===== */
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
-        status = "okay";
+        status = "disabled";
+    };
+};
 
-        /* --- 通常時（全レイヤー共通） --- */
-        input-processors = <
-            &zip_xy_scaler 1 1       /* X/Yそのまま */
-            &zip_scroll_scaler 1 1   /* スクロール速度そのまま */
-        >;
+&spi0 {
+    status = "disabled";
 
-        /* --- 特定レイヤー（例: 8 = MOUSE）時のみ遅くする --- */
-        slow_on_mouse_layer {
-            layers = <8>;
-            input-processors = <
-                &zip_xy_scaler 1 2       /* 移動速度を1/2に */
-                &zip_scroll_scaler 1 2   /* スクロール速度も1/2に */
-            >;
-        };
+    trackball: trackball@0 {
+        status = "disabled";
+        reg = <0>;
     };
 };
