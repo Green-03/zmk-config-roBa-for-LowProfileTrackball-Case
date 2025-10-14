@@ -1,5 +1,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
+#include <input/processors.dtsi>
 
 / {
     chosen {
@@ -119,10 +120,15 @@
 };
 
 &spi0 {
-    status = "disabled";
+    status = "okay";
 
     trackball: trackball@0 {
-        status = "disabled";
+        status = "okay";
         reg = <0>;
+        input-processors = <
+            &zip_xy_scaler 1 1
+            &zip_scroll_scaler 1 1
+        >;
+
     };
 };
