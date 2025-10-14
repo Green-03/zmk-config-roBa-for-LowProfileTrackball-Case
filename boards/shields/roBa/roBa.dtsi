@@ -113,54 +113,34 @@
         triggers-per-rotation = <48>;
     };
 
+    /* ===== トラックボール定義 ===== */
     &spi0 {
         status = "okay";
 
         trackball: trackball@0 {
             status = "okay";
             reg = <0>;
-            /* デフォルト CPI (conf での指定が優先する場合あり) */
-            /* ここではノードを有効にしておくだけでOK */
         };
     };
 
-    /* --- トラックボール入力リスナー（必ず enabled に） --- */
+    /* ===== トラックボール速度制御 ===== */
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         status = "okay";
 
-        /*
-         * Base input processors (通常時)
-         *  - ここではデフォルト（倍率 1:1、スクロールそのまま）にしておきます。
-         *  - 必要なら base でもスケーリングを入れてください。
-         */
-        input-processors = < 
-            /* X/Y scaler multiplier=1 divisor=1 (no change) */
-            &zip_xy_scaler 1 1
-            /* scroll scaler default (no change) */
-            &zip_scroll_scaler 1 1
+        /* --- 通常時（全レイヤー共通） --- */
+        input-processors = <
+            &zip_xy_scaler 1 1       /* X/Yそのまま */
+            &zip_scroll_scaler 1 1   /* スクロール速度そのまま */
         >;
 
-        /*
-         * レイヤー別オーバーライド
-         *  - ここで layers=<8> にマッチする override を追加。
-         *  - layer 8 = MOUSE レイヤー（あなたの keymap 配列で確認済み）
-         *
-         *  この override が有効なとき、X/Y とスクロールを 1/2 にします（遅くする）。
-         */
-        mouse_slow_override {
-            layers = <8>; /* MOUSE レイヤー番号 */
+        /* --- 特定レイヤー（例: 8 = MOUSE）時のみ遅くする --- */
+        slow_on_mouse_layer {
+            layers = <8>;
             input-processors = <
-                /* X/Y を 1/2 にする（multiplier=1, divisor=2）*/
-                &zip_xy_scaler 1 2
-                /* スクロールも 1/2 にする */
-                &zip_scroll_scaler 1 2
+                &zip_xy_scaler 1 2       /* 移動速度を1/2に */
+                &zip_scroll_scaler 1 2   /* スクロール速度も1/2に */
             >;
         };
-
-        /*
-         * もしスクロールレイヤー（scroll-layers）も別扱いにしたければ、
-         * そこ用の override を追加できます（例：layers = <5>;）。
-         */
     };
- }; /* end / */
+};
