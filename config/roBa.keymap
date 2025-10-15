@@ -74,13 +74,13 @@
         mouse4 {
             bindings = <&mkp MB4>;
             key-positions = <18 30>;
-            layers = <4>;
+            layers = <4 8>;
         };
 
         mouce5 {
             bindings = <&mkp MB5>;
             key-positions = <20 32>;
-            layers = <4>;
+            layers = <4 8>;
         };
 
         lay2-muhwnkan {
@@ -257,10 +257,10 @@
 
         SHIFT_NUM {
             bindings = <
-&kp RS(NUMBER_1)  &kp RS(NUMBER_2)  &kp RS(NUMBER_3)  &trans  &trans                      &kp RS(NUMBER_8)  &kp RS(NUMBER_9)  &kp JP_EQUAL      &kp JP_TILDE    &trans
-&kp RS(NUMBER_1)  &trans            &trans            &trans  &trans  &trans      &trans  &trans            &trans            &kp JP_AT         &trans          &trans
-&trans            &trans            &trans            &trans  &trans  &trans      &trans  &trans            &trans            &trans            &kp RS(INT_RO)  &trans
-&trans            &trans            &trans            &trans  &trans  &trans      &trans  &trans                                                                &trans
+&kp RS(NUMBER_1)  &kp RS(NUMBER_2)  &kp RS(NUMBER_3)  &trans  &trans                      &kp RS(NUMBER_8)  &kp RS(NUMBER_9)  &kp JP_EQUAL  &kp JP_TILDE    &trans
+&kp RS(NUMBER_1)  &trans            &trans            &trans  &trans  &trans      &trans  &trans            &trans            &kp JP_AT     &trans          &trans
+&trans            &trans            &trans            &trans  &trans  &trans      &trans  &trans            &trans            &trans        &kp RS(INT_RO)  &trans
+&trans            &trans            &trans            &trans  &trans  &trans      &trans  &trans                                                            &trans
             >;
         };
 
