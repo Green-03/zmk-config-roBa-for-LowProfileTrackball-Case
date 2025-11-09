@@ -201,10 +201,10 @@
 
         SYMBOL {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3    &kp NUMBER_4     &kp NUMBER_5                              &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8       &kp NUMBER_9       &kp NUMBER_0
-&trans        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans        &trans      &trans          &trans        &trans        &kp LEFT_BRACKET   &kp LEFT_BRACKET   &kp LEFT_BRACKET
-&trans        &trans          &trans          &trans           &trans        &trans      &trans          &trans        &trans        &kp SEMICOLON      &kp COLON          &mt RIGHT_SHIFT INT_RO
-&trans        &trans          &trans          &trans           &trans        &trans      &kp INT_HENKAN  &trans                                                        &trans
+&kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3    &kp NUMBER_4     &kp NUMBER_5                              &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8      &kp NUMBER_9      &kp NUMBER_0
+&trans        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans        &trans      &trans          &trans        &trans        &kp LEFT_BRACKET  &kp LEFT_BRACKET  &kp LEFT_BRACKET
+&trans        &trans          &trans          &trans           &trans        &trans      &trans          &trans        &trans        &kp SEMICOLON     &kp COLON         &mt RIGHT_SHIFT INT_RO
+&trans        &trans          &trans          &trans           &trans        &trans      &kp INT_HENKAN  &trans                                                          &trans
             >;
         };
 
@@ -267,7 +267,7 @@
         MOUSE2 {
             bindings = <
 &kp RS(NUMBER_1)  &kp RS(NUMBER_2)  &kp RS(NUMBER_3)  &kp RS(NUMBER_4)  &kp RS(NUMBER_5)                      &trans  &trans    &mkp MB3  &trans    &trans
-&trans            &trans            &trans            &trans            &trans            &trans      &trans  &trans  &mkp MB1  &trans    &mkp MB2  &trans
+&trans            &trans            &trans            &trans            &trans            &trans      &trans  &trans  &mkp MB1  &lt 5 K   &mkp MB2  &trans
 &trans            &trans            &trans            &trans            &trans            &trans      &trans  &trans  &trans    &trans    &trans    &trans
 &trans            &trans            &trans            &trans            &trans            &trans      &trans  &trans                                &trans
             >;
