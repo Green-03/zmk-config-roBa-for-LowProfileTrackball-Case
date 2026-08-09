@@ -99,10 +99,6 @@
             layers = <0>;
         };
 
-        z {
-            bindings = <&kp Z>;
-            key-positions = <11 23>;
-        };
     };
 
     macros {
