@@ -93,6 +93,16 @@
             key-positions = <9 21>;
             layers = <0>;
         };
+
+        a {
+            bindings = <&kp A>;
+            key-positions = <1 11>;
+        };
+
+        q2 {
+            bindings = <&kp Q>;
+            key-positions = <0 1>;
+        };
     };
 
     behaviors {
