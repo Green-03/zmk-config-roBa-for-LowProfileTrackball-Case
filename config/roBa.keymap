@@ -103,6 +103,11 @@
             bindings = <&kp Q>;
             key-positions = <0 1>;
         };
+
+        z {
+            bindings = <&kp Z>;
+            key-positions = <23 11>;
+        };
     };
 
     behaviors {
@@ -196,7 +201,7 @@
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans    &mkp MB3  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &lt 5 K   &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &sl 5     &mkp MB2  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
@@ -232,7 +237,7 @@
         MOUSE2 {
             bindings = <
 &kp RS(NUMBER_1)  &kp RS(NUMBER_2)  &kp RS(NUMBER_3)  &kp RS(NUMBER_4)  &kp RS(NUMBER_5)                      &trans  &trans    &mkp MB3  &trans    &trans
-&trans            &trans            &trans            &trans            &trans            &trans      &trans  &trans  &mkp MB1  &lt 5 K   &mkp MB2  &trans
+&trans            &trans            &trans            &trans            &trans            &trans      &trans  &trans  &mkp MB1  &sl 5     &mkp MB2  &trans
 &trans            &trans            &trans            &trans            &trans            &trans      &trans  &trans  &trans    &trans    &trans    &trans
 &trans            &trans            &trans            &trans            &trans            &trans      &trans  &trans                                &trans
             >;
