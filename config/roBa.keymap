@@ -108,6 +108,16 @@
             bindings = <&kp Z>;
             key-positions = <23 11>;
         };
+
+        AND {
+            bindings = <&kp RS(NUMBER_6)>;
+            key-positions = <5 17>;
+        };
+
+        APOSTROPHE_ {
+            bindings = <&kp SQT>;
+            key-positions = <6 18>;
+        };
     };
 
     behaviors {
