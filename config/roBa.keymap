@@ -227,8 +227,8 @@
 
         SHIFT_NUM {
             bindings = <
-&kp RS(NUMBER_1)  &kp RS(NUMBER_2)  &kp RS(NUMBER_3)  &trans  &trans                      &kp RS(NUMBER_8)  &kp RS(NUMBER_9)  &trans         &trans          &trans
-&kp RS(NUMBER_1)  &trans            &trans            &trans  &trans  &trans      &trans  &trans            &trans            &trans         &trans          &trans
+&kp RS(NUMBER_1)  &kp RS(NUMBER_2)  &kp RS(NUMBER_3)  &trans  &trans                      &kp RS(NUMBER_8)  &kp RS(NUMBER_9)  &kp EQUAL      &kp TILDE       &trans
+&kp RS(NUMBER_1)  &trans            &trans            &trans  &trans  &trans      &trans  &trans            &trans            &kp AT_SIGN    &trans          &trans
 &trans            &trans            &trans            &trans  &trans  &trans      &trans  &kp LESS_THAN     &kp GREATER_THAN  &kp RS(SLASH)  &kp RS(INT_RO)  &trans
 &trans            &trans            &trans            &trans  &trans  &trans      &trans  &trans                                                             &trans
             >;
