@@ -246,10 +246,10 @@
 
         MOUSE2 {
             bindings = <
-&kp RS(NUMBER_1)  &kp RS(NUMBER_2)  &kp RS(NUMBER_3)  &kp RS(NUMBER_4)  &kp RS(NUMBER_5)                      &trans  &trans    &mkp MB3  &trans    &trans
-&trans            &trans            &trans            &trans            &trans            &trans      &trans  &trans  &mkp MB1  &sl 5     &mkp MB2  &trans
-&trans            &trans            &trans            &trans            &trans            &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans            &trans            &trans            &trans            &trans            &trans      &trans  &trans                                &trans
+&kp RS(NUMBER_1)  &kp RS(NUMBER_2)  &kp RS(NUMBER_3)  &kp RS(NUMBER_4)  &kp RS(NUMBER_5)                      &trans  &trans          &mkp MB3  &trans           &trans
+&trans            &trans            &trans            &trans            &trans            &trans      &trans  &trans  &mkp MB1        &sl 5     &mkp MB2         &trans
+&trans            &trans            &trans            &trans            &trans            &trans      &trans  &trans  &kp LEFT_ARROW  &trans    &kp RIGHT_ARROW  &trans
+&trans            &trans            &trans            &trans            &trans            &trans      &trans  &trans                                             &trans
             >;
         };
     };
