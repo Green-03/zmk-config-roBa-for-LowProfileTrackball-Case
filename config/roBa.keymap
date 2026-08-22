@@ -121,13 +121,13 @@
     };
 
     behaviors {
-        hold_3000: hold_3000 {
+        hold_5000: hold_5000 {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_3000";
+            label = "HOLD_5000";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <3000>;
+            tapping-term-ms = <5000>;
             quick-tap-ms = <(-1)>;
             require-prior-idle-ms = <(-1)>;
             flavor = "balanced";
@@ -171,8 +171,8 @@
         default_layer {
             bindings = <
 &kp TAB                  &kp W         &kp E               &kp R                            &kp T                                                 &kp Y      &kp U  &kp I      &kp O    &lt 1 P
-&hold_3000 LEFT_SHIFT A  &kp S         &kp D               &kp F                            &kp G        &trans                  &kp JP_LBRACKET  &kp H      &kp J  &lt 5 K    &kp L    &lt 8 MINUS
-&hold_3000 LEFT_SHIFT Z  &kp X         &kp C               &kp V                            &kp B        &lt 6 LEFT_BRACKET      &kp JP_RBRACKET  &kp N      &kp M  &kp COMMA  &kp DOT  &lt 7 SLASH
+&hold_5000 LEFT_SHIFT A  &kp S         &kp D               &kp F                            &kp G        &trans                  &kp JP_LBRACKET  &kp H      &kp J  &lt 5 K    &kp L    &lt 8 MINUS
+&hold_5000 LEFT_SHIFT Z  &kp X         &kp C               &kp V                            &kp B        &lt 6 LEFT_BRACKET      &kp JP_RBRACKET  &kp N      &kp M  &kp COMMA  &kp DOT  &lt 7 SLASH
 &kp LCTRL                &kp LEFT_WIN  &lt 2 INT_MUHENKAN  &hold_500 LEFT_ALT INT_MUHENKAN  &lt 1 SPACE  &lt 3 INT_HENKAN        &kp BACKSPACE    &kp ENTER                             &kp DEL
             >;
 
@@ -237,10 +237,10 @@
 
         SHIFT_NUM {
             bindings = <
-&kp RS(NUMBER_1)  &kp RS(NUMBER_2)  &kp RS(NUMBER_3)  &kp RS(NUMBER_4)  &kp RS(N5)                      &kp RS(NUMBER_8)  &kp RS(NUMBER_9)  &kp JP_EQUAL   &kp JP_TILDE    &kp JP_YEN
-&kp RS(NUMBER_1)  &trans            &trans            &trans            &trans      &trans      &trans  &trans            &kp JP_PLUS       &kp JP_AT      &kp JP_ASTERISK &trans
-&trans            &trans            &trans            &trans            &trans      &trans      &trans  &kp LESS_THAN     &kp GREATER_THAN  &kp RS(SLASH)  &kp RS(INT_RO)  &trans
-&trans            &trans            &trans            &trans            &trans      &trans      &trans  &trans                                                             &trans
+&kp RS(NUMBER_1)  &kp RS(NUMBER_2)  &kp RS(NUMBER_3)  &kp RS(NUMBER_4)  &kp RS(N5)                      &kp RS(NUMBER_8)  &kp RS(NUMBER_9)  &kp JP_EQUAL   &kp JP_TILDE     &kp JP_YEN
+&kp RS(NUMBER_1)  &trans            &trans            &trans            &trans      &trans      &trans  &trans            &kp JP_PLUS       &kp JP_AT      &kp JP_ASTERISK  &trans
+&trans            &trans            &trans            &trans            &trans      &trans      &trans  &kp LESS_THAN     &kp GREATER_THAN  &kp RS(SLASH)  &kp RS(INT_RO)   &trans
+&trans            &trans            &trans            &trans            &trans      &trans      &trans  &trans                                                              &trans
             >;
         };
 
